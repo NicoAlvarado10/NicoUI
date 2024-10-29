@@ -1,7 +1,7 @@
 ---
 const {image, alt, label} = Astro.props
 ---
-<article class="py-8 px-28  m-auto flex flex-col gap-5 framework ">
+<article class="cursor-pointer py-8 px-28  m-auto flex flex-col gap-5 framework bg-slate-950 rounded-2xl">
     <img src={image} alt={alt} width="80" class="frameworks-img">
     <span class="text-center text-gray-400">{label}</span>
 </article>
@@ -16,7 +16,7 @@ const {image, alt, label} = Astro.props
     text-decoration: underline;
 }
 .framework:hover{
-    box-shadow: 5px 5px 10px #9ca3af;
+    box-shadow: 5px 5px 5px #9aaecf;
 }
 </style>
 

@@ -1,23 +1,42 @@
 ---
-
+import { Github } from "lucide-react"
 ---
 
-<footer>
-    <div class="max-w-7xl m-auto text-white grid grid-cols-3 justify-center items-center py-9">
-        <article>
-            <h3>NicoUI</h3>
-            <p>Componentes UI para todos los frameworks frontend populares</p>
-        </article>
-        <article>
-            <ul>
-                <li><a href="#">Documentación</a></li>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Componentes</a></li>
-            </ul>
-        </article>
-    </div>
-   <div>
-       <p class="text-gray-400 text-center mb-3">© 2024 NicoUI. Todos los derechos reservados.</p>
-       <span class="text-center text-white flex items-center justify-center mb-3 gap-1">Creado por<a href="https://portafolio-nico-alvarado.netlify.app/es/" class="hover:underline">Nico</a>🩵</span>
+<footer class="bg-slate-950 pt-20 gradient-section">
+    <div class="max-w-7xl pt-40 m-auto flex flex-col md:flex-row justify-between items-center p-11 p">
+        <div class="mb-4 md:mb-0">
+          <span class="text-2xl font-bold text-white">NicoUI</span>
+          <p class="text-gray-400 w-96">Componentes UI para todos los frameworks frontend populares.</p>
+        </div>
+      
+        <nav class="flex flex-wrap justify-center md:justify-end gap-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Inicio</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Documentación</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Componentes</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Frameworks</a>
+        </nav>
+        <div class="flex justify-center items-center flex-col gap-3">
+          <a class=" transition duration-150 p-1 text-gray-400 hover:text-white" 
+            href="https://github.com/NicoAlvarado10/NicoUI" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="GitHub Repository">
+            <Github />
+          </a>
+            <span class="text-center text-white flex items-center justify-center mb-3 gap-1">Creado por<a href="https://portafolio-nico-alvarado.netlify.app/es/" class="hover:underline">Nico</a>🩵</span>
+        </div>
+      </div>
+   <div class="copyright py-3 mt-9">
+       <p class="text-gray-400 text-center ">© 2024 NicoUI. Todos los derechos reservados.</p>
+       
    </div>
 </footer>
+
+<style>
+.copyright {
+    border-top: 2px solid #9ca3af;
+}
+.gradient-section {
+  background: linear-gradient(to top, #0f172a 50%, #0f172a 40%, #000000 100%);
+}
+</style>

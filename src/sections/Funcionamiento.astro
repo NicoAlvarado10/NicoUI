@@ -1,34 +1,40 @@
 ---
 import { Copy, Code, Zap } from "lucide-react";
 ---
-<section class="py-24 px-8 max-w-7xl m-auto">
-    <h2 class="text-white text-center text-5xl">Como Funciona?</h2>
-    <div class="grid grid-cols-3 justify-between items-center mt-16 gap-8">
-        <article class="caracteristica-1 rounded-xl text-center py-8 px-8">
-            <div class="bg-blue-500 rounded-full p-4 mb-2 w-16 m-auto">
-                <Code className="h-8 w-8 text-white"/>
-            </div>
-            <h3 class="text-white text-xl font-semibold mt-4 mb-2">1. Elige un Componente</h3>
-            <p class="text-gray-400 ">Navega por nuestra biblioteca y selecciona el componente que necesitas</p>
-        </article>
-        <article class="caracteristica-2 rounded-xl text-center py-8 px-8">
-            <div class="bg-green-500 rounded-full p-4 mb-2 w-16 m-auto">
-                <Copy className="h-8 w-8 text-white"/>
-            </div>
-            <h3 class="text-white text-xl font-semibold mt-4 mb-2">2. Copia el Código</h3>
-            <p class="text-gray-400 ">Copia el componente en el lenguaje que desees</p>
-        </article>
-        <article class="caracteristica-3 rounded-xl text-center py-8 px-8">
-            <div class="bg-purple-500 rounded-full p-4 mb-2 w-16 m-auto">
-                <Zap className="h-8 w-8 text-white"/>
-            </div>
-            <h3 class="text-white text-xl font-semibold mt-4 mb-2">3. Pega y Personaliza</h3>
-            <p class="text-gray-400">Pega el código en tu proyecto y ajústalo según tus necesidades</p>
-        </article>
+<section class="py-24 px-8 bg-slate-950 gradient-section">
+    <div class="max-w-7xl m-auto">
+        <h2 class="text-white text-center text-5xl">Simplicidad en 3 Pasos</h2>
+        <div class="grid grid-cols-3 justify-between items-center mt-16 gap-8">
+            <article class="bg-black caracteristica-1 rounded-xl text-center py-8 px-8">
+                <div class="bg-blue-500 rounded-full p-4 mb-2 w-16 m-auto">
+                    <Code className="h-8 w-8 text-white"/>
+                </div>
+                <h3 class="text-white text-xl font-semibold mt-4 mb-2">1. Elige un Componente</h3>
+                <p class="text-gray-400 ">Navega por nuestra biblioteca y selecciona el componente que necesitas.</p>
+            </article>
+            <article class="bg-black caracteristica-2 rounded-xl text-center py-8 px-8">
+                <div class="bg-green-500 rounded-full p-4 mb-2 w-16 m-auto">
+                    <Copy className="h-8 w-8 text-white"/>
+                </div>
+                <h3 class="text-white text-xl font-semibold mt-4 mb-2">2. Copia el Código</h3>
+                <p class="text-gray-400 ">Copia el componente en el lenguaje que desees.</p>
+            </article>
+            <article class="bg-black caracteristica-3 rounded-xl text-center py-8 px-8">
+                <div class="bg-purple-500 rounded-full p-4 mb-2 w-16 m-auto">
+                    <Zap className="h-8 w-8 text-white"/>
+                </div>
+                <h3 class="text-white text-xl font-semibold mt-4 mb-2">3. Pega y Personaliza</h3>
+                <p class="text-gray-400">Pega el código en tu proyecto y ajústalo según tus necesidades.</p>
+            </article>
+        </div>
+
     </div>
 </section>
 
 <style>
+      .gradient-section {
+  background: linear-gradient(to bottom, #0f172a 10%, #0f172a 50%, #000000 100%);
+}
  .caracteristica-1{
     box-shadow: 5px 5px 5px  #3b82f6;
     transition: 0.3s;

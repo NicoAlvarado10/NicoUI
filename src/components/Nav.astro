@@ -1,27 +1,43 @@
 ---
 import { Github } from 'lucide-react';
 ---
-<nav class="flex justify-between items-center max-w-7xl m-auto pt-7 pb-6">
-    <ul class="flex items-center gap-8">
-        <li>
-            <a class="text-yellow-50 font-semibold text-3xl" href="#">NicoUI</a>
-        </li>
-        <li>
-            <a href="#" 
-               class="font-medium text-gray-400 text-l transition duration-200 hover:text-cyan-50" 
-               aria-label="Documentation">Docs</a>
-        </li>
-        <li>
-            <a href="#" 
-               class="font-medium text-gray-400 text-l duration-200 hover:text-cyan-50" 
-               aria-label="Components">Components</a>
-        </li>
-    </ul>
-    <a class="font-medium text-gray-400 text-l duration-200 hover:text-cyan-50 p-1 border-solid border-gray-400 rounded-3xl hover:border-cyan-50 " 
-       href="https://github.com/NicoAlvarado10/NicoUI" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="GitHub Repository">
-       <Github />
-    </a>
+<nav class="nav-gradient bg-slate-950 ">
+    <div class=" pt-7 pb-7 flex justify-between items-center max-w-7xl m-auto">
+
+        <a class="text-yellow-50 font-semibold text-3xl" href="#">NicoUI</a>
+        <ul class="flex items-center gap-8">
+            
+            <li>
+                <a href="#" 
+                   class="font-medium text-gray-400 text-l transition duration-200 hover:text-cyan-50" 
+                   aria-label="Documentation">Docs</a>
+            </li>
+            <li>
+                <a href="#" 
+                   class="font-medium text-gray-400 text-l duration-200 hover:text-cyan-50" 
+                   aria-label="Components">Componentes</a>
+            </li>
+            <li>
+                <a href="#" 
+                   class="font-medium text-gray-400 text-l duration-200 hover:text-cyan-50" 
+                   aria-label="Components">Frameworks</a>
+            </li>
+        </ul>
+        <a class="transition duration-150 p-1 text-gray-400 rounded-full hover:bg-white hover:text-black" 
+           href="https://github.com/NicoAlvarado10/NicoUI" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="GitHub Repository">
+           <Github />
+        </a>
+    </div>
 </nav>
+
+<style>
+.nav-gradient {
+  background: linear-gradient(to bottom, #0f172a 0%, #0f172a 25%, #000000 100%);
+}
+
+
+
+</style>
