@@ -1,8 +1,9 @@
 ---
 const { title } = Astro.props;
-import Hero from '@/components/Hero.astro';
+import Header from '@/sections/Header.astro';
 import '../styles/globals.css'
-import Nav from '@/components/Nav.astro';
+import Caracteristicas from '@/sections/Caracteristicas.astro';
+
 
 ---
 <html lang="es">
@@ -14,10 +15,10 @@ import Nav from '@/components/Nav.astro';
     
   </head>
   <body class="bg-black">
-    <header>
-        <Nav/>
-        <Hero/>
-    </header>
+    <Header/>
+    <main>
+      <Caracteristicas/>
+    </main>
   </body>
 </html>
 

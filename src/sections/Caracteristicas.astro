@@ -1,0 +1,33 @@
+---
+
+import { Copy, Layout, Palette } from "lucide-react";
+
+---
+
+<section class="py-20 px-8 max-w-7xl m-auto ">
+    <h2 class="text-white text-center text-4xl">Caracteristicas</h2>
+    <div class="grid grid-cols-3 items-center gap-4 pt-16">
+        <article class="text-center">
+            <div class="flex m-auto w-14 bg-blue-500 p-3 rounded-full mb-2 transtion duration-150 hover:bg-blue-400 ">
+                <Copy className="h-8 w-8 text-white"/>
+            </div>
+            <h3 class="text-white text-xl font-semibold mb-2">Copiar y Pegar</h3>
+            <p class="text-gray-400">Simplemente copia el código del componente que necesitas y pégalo en tu proyecto
+            </p>
+        </article>
+        <article class="text-center">
+            <div class="flex m-auto w-14 bg-green-500 p-3 rounded-full mb-2 transtion duration-150 hover:bg-green-400">
+                <Layout className="h-8 w-8 text-white" />
+              </div>
+              <h3 class="text-white  text-xl font-semibold mb-2">Flexible</h3>
+              <p class="text-gray-400 ">Componentes compatibles React, Vue, Angular y otros frameworks populares</p>
+        </article>
+        <article class="text-center">
+            <div class="flex m-auto w-14 bg-purple-500 p-3 rounded-full mb-2 transtion duration-150 hover:bg-purple-400">
+                <Palette className="h-8 w-8 text-white" />
+              </div>
+              <h3 class="text-white text-xl font-semibold mb-2">Personalizable</h3>
+              <p class="text-gray-400">Fácil de adaptar a tu diseño y necesidades específicas</p>
+        </article>
+    </div>
+</section>
