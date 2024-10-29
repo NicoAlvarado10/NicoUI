@@ -3,8 +3,10 @@ const { title } = Astro.props;
 import Header from '@/sections/Header.astro';
 import '../styles/globals.css'
 import Caracteristicas from '@/sections/Caracteristicas.astro';
-
-
+import Framewoks from '@/sections/Framewoks.astro';
+import Funcionamiento from '@/sections/Funcionamiento.astro';
+import Banner from '@/sections/Banner.astro';
+import Footer from '@/sections/Footer.astro';
 ---
 <html lang="es">
   <head>
@@ -18,7 +20,11 @@ import Caracteristicas from '@/sections/Caracteristicas.astro';
     <Header/>
     <main>
       <Caracteristicas/>
+      <Framewoks/>
+      <Funcionamiento/>
+      <Banner/>
     </main>
+    <Footer/>
   </body>
 </html>
 
