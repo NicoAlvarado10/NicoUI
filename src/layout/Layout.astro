@@ -1,0 +1,39 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/globals.css'
+---
+<html lang="es">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <title>NicoUI | The Best Collection of Components</title>
+    <ViewTransitions/>
+  </head>
+  <body class="bg-black">
+    <main>
+    <slot/>
+    </main>
+  </body>
+</html>
+<style is:global>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      border: none;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    body, html {
+      scroll-behavior: smooth;
+    }
+    img {
+      display: flex;
+      max-width: 100%;
+    }
+  </style>
+  

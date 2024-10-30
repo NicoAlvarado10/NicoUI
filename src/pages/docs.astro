@@ -1,0 +1,39 @@
+---
+import Layout from "@/layout/Layout.astro";
+import Nav from "@/components/Nav.astro";
+import { ArrowRight } from "lucide-react";
+---
+<Nav/>
+<Layout>
+  <div class=" flex pl-20  pr-9">
+
+    <aside class="pr-24 mt-8">
+      <nav>
+        <ul class="flex flex-col gap-3">
+          <li><a class="text-white text-lg" href="#">Introduccion</a></li>
+          <li><a class="text-gray-400 hover:text-white transition duration-150" href="#">Componentes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class=" pl-12">
+      <div class="mt-7">
+        <h1 class="text-white flex items-center gap-2">
+          Docs
+          <ArrowRight className="w-5"/>
+      </h1>
+      </div>
+      <section class="  text-white max-w-4xl m-auto pt-5 flex flex-col gap-4">
+        <h2 class="text-3xl font-semibold mb-1">Introduccion</h2>
+        <p class="italic text-gray-400 text-lg mb-2">Accsesible, Personalizable, Open Source</p>
+
+        <p>Esta <strong>NO</strong> es una biblioteca de componentes. Es una coleccion de componentes reutilizables que puedes copiar y pegar en tus aplicaciones.</p>
+
+        <strong >Que significa que no es una biblioteca de componentes</strong>
+        <p>Significa que no lo instalas como una dependencia. No está disponible ni se distribuye a través de npm.</p>
+      </section>
+
+    </div>
+  
+  </div>
+</Layout>
