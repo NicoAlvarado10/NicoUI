@@ -7,7 +7,6 @@ Bienvenido a **NicoUI**, una colección de componentes bellamente diseñados que
 - [Características](#características)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Ejemplos de Componentes](#ejemplos-de-componentes)
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 
