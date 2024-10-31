@@ -2,6 +2,7 @@
 import Layout from "@/layout/Layout.astro";
 import Nav from "@/components/Nav.astro";
 import { ArrowRight } from "lucide-react";
+
 ---
 <Nav/>
 <Layout>
@@ -31,9 +32,67 @@ import { ArrowRight } from "lucide-react";
 
         <strong >Que significa que no es una biblioteca de componentes</strong>
         <p>Significa que no lo instalas como una dependencia. No está disponible ni se distribuye a través de npm.</p>
+
+        <div class="mt-4 flex flex-col gap-5">
+          <h3 class="faq-border text-xl font-bold mb-2 pb-2">Preguntas Frecuentes</h3>
+          
+          <details class="faq-border mb-4 pb-2 group">
+            <summary class="text-white cursor-pointer flex justify-between items-center group-hover:underline">
+              ¿Puedo usar esto en mi proyecto?
+              <span class="ml-2">
+                <svg class="w-4 h-4 transition-transform group-open:rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </summary>
+            <p class="text-white pt-5">Sí. es de uso gratuito para proyectos personales y comerciales. No se requiere atribución.</p>
+          </details>
+          
+          <details class="faq-border mb-4 pb-2 group">
+            <summary class="text-white cursor-pointer flex justify-between items-center group-hover:underline">
+              ¿Por qué no lo publicas como paquete npm?
+              <span class="ml-2">
+                <svg class="w-4 h-4 transition-transform group-open:rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </summary>
+            <p class="text-white pt-5">La idea detrás de esto es darle propiedad y control sobre el código, permitiéndole decidir cómo se construyen y diseñan los componentes.</p>
+          </details>
+          
+          <details class="faq-border mb-4 pb-2 group">
+            
+
+              <summary class="text-white cursor-pointer flex justify-between items-center group-hover:underline">
+                ¿Qué frameworks son compatibles?
+                <span class="ml-2">
+                  <svg class="w-4 h-4 transition-transform group-open:rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+                
+              </summary>
+          
+            <p class="text-white pt-5">Puedes usarlo en cualquiera, React, Astro, Angular, Vue, etc.</p>
+          </details>
+        </div>
+        
+        
+        
+        
       </section>
 
     </div>
   
   </div>
 </Layout>
+
+<style>
+  .faq-border{
+    border-bottom: 0.5px solid #9ca3af ;
+  }
+  .group-open .transition-transform {
+  transform: rotate(90deg);
+}
+
+</style>
