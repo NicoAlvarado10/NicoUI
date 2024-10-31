@@ -1,7 +1,7 @@
 ---
 import { Github } from 'lucide-react';
 ---
-<nav class="nav-gradient bg-slate-950 ">
+<nav class="nav-gradient bg-slate-950 sticky top-0 z-10">
     <div class=" pt-7 pb-6 flex justify-between items-center max-w-7xl m-auto">
 
         <a class="text-yellow-50 font-semibold text-3xl " href="/">NicoUI</a>
@@ -23,12 +23,14 @@ import { Github } from 'lucide-react';
                    aria-label="Components">Frameworks</a>
             </li>
         </ul>
-        <a class="transition duration-150 p-1 text-gray-400 rounded-full hover:bg-white hover:text-black" 
+        <a class="transition duration-150 text-white hover:scale-110" 
            href="https://github.com/NicoAlvarado10/NicoUI" 
            target="_blank" 
            rel="noopener noreferrer" 
            aria-label="GitHub Repository">
-           <Github />
+           <span class="text-4xl">
+               <i class="ri-github-fill"></i>
+           </span>
         </a>
     </div>
 </nav>

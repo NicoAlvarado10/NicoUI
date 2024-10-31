@@ -7,29 +7,14 @@ import Framework from "@/components/Framework.astro";
 ---
 <Nav/>
 <Layout>
-  <section class=" flex  pl-20  pr-9">
-
-    <aside class="pr-24 mt-8 h-screen sticky top-16 left-28">
-      <nav>
-        <ul class="flex flex-col gap-3">
-          <li><a class="text-lg text-gray-400 hover:text-white transition duration-150 font-semibold" href="#introduccion">Introduccion</a></li>
-          
-          <li><a class="text-gray-400 hover:text-white transition duration-150 font-semibold" href="#frameworks">Frameworks</a></li>
-          <li><a class="text-gray-400 hover:text-white transition duration-150 font-semibold" href="#componentes">Componentes</a></li>
-          <!-- Agrega más elementos aquí si es necesario -->
-        </ul>
-      </nav>
-    </aside>
-    
-    
-    <div class=" pl-14">
+  <section class="max-w-4xl m-auto">
 
       <h1 class="text-white font-semibold flex items-center gap-3 mt-7 ">
         Docs
         <BookOpenText/>
       </h1>
 
-      <section class=" text-white max-w-4xl m-auto pt-5 flex flex-col gap-4" id="introduccion">
+      <section class=" text-white pt-5 flex flex-col gap-4" id="introduccion">
 
         <h2 class="text-3xl font-semibold mb-1">Introduccion</h2>
         <p class="italic text-gray-400 text-xl ">Accsesible, Personalizable, Open Source</p>
@@ -83,7 +68,7 @@ import Framework from "@/components/Framework.astro";
         
       </section>
 
-      <section class="mt-11  max-w-4xl m-auto " id="componentes">
+      <section class="mt-11" id="componentes">
         <h2 class="text-3xl font-semibold mb-1 text-white">Componentes</h2>
         <p class="text-white mt-5 text-lg">Los componentes estan creados con Tailwind CSS, son accesibles y personalizables, ente ellos encontraras: </p>
         <ul class="text-white flex flex-col gap-3 mt-4 pl-7">
@@ -109,7 +94,7 @@ import Framework from "@/components/Framework.astro";
         <p class="text-white mt-5 text-lg">y muchos mas...</p>
       </section>
 
-      <section class="mt-11 pt-5 max-w-4xl m-auto " id="frameworks">
+      <section class="mt-11 pt-5 " id="frameworks">
         <h2 class="text-3xl font-semibold mb-1 text-white">Frameworks</h2>
         <p class="text-white text-lg my-5">Elige tu framework preferido y explora los componentes disponibles.</p>
         <div class="grid grid-cols-3 gap-5  text-white max-w-4xl m-auto pt-5">
