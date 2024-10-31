@@ -1,0 +1,35 @@
+---
+import { PrimaryButton } from "@/Componentes/botones/PrimaryButton"
+import { SecondaryButton } from "@/Componentes/botones/SecondaryButton"
+import { WarningButton } from "@/Componentes/botones/WarningButton"
+import Layout from "@/layout/Layout.astro"
+---
+<Layout>
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Componentes de Botones</h1>
+    
+    <section class="mb-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Botón Primario</h2>
+        <PrimaryButton label="Primario" />
+        <pre class="mt-4 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
+            {'<PrimaryButton label="Primario" />'}
+        </pre>
+    </section>
+    
+    <section class="mb-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Botón Secundario</h2>
+        <SecondaryButton label="Secundario" />
+        <pre class="mt-4 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
+            {'<SecondaryButton label="Secundario" />'}
+        </pre>
+    </section>
+    
+    <section class="mb-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Botón de Advertencia</h2>
+        <WarningButton label="Advertencia" />
+        <pre class="mt-4 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
+            {'<WarningButton label="Advertencia" />'}
+        </pre>
+    </section>
+
+</Layout>
+

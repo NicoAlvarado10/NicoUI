@@ -1,37 +1,41 @@
 ---
 import Layout from "@/layout/Layout.astro";
 import Nav from "@/components/Nav.astro";
-import { ArrowRight } from "lucide-react";
-
+import {BookOpenText} from "lucide-react";
+import Footer from "@/sections/Footer.astro";
+import Framework from "@/components/Framework.astro";
 ---
 <Nav/>
 <Layout>
-  <div class=" flex pl-20  pr-9">
+  <section class=" flex  pl-20  pr-9">
 
-    <aside class="pr-24 mt-8">
+    <aside class="pr-24 mt-8 h-screen sticky top-16 left-28">
       <nav>
         <ul class="flex flex-col gap-3">
-          <li><a class="text-white text-lg" href="#">Introduccion</a></li>
-          <li><a class="text-gray-400 hover:text-white transition duration-150" href="#">Componentes</a></li>
+          <li><a class="text-lg text-gray-400 hover:text-white transition duration-150 font-semibold" href="#introduccion">Introduccion</a></li>
+          
+          <li><a class="text-gray-400 hover:text-white transition duration-150 font-semibold" href="#frameworks">Frameworks</a></li>
+          <li><a class="text-gray-400 hover:text-white transition duration-150 font-semibold" href="#componentes">Componentes</a></li>
+          <!-- Agrega más elementos aquí si es necesario -->
         </ul>
       </nav>
     </aside>
+    
+    
+    <div class=" pl-14">
 
-    <div class=" pl-12">
-      <div class="mt-7">
-        <h1 class="text-white flex items-center gap-2">
-          Docs
-          <ArrowRight className="w-5"/>
+      <h1 class="text-white font-semibold flex items-center gap-3 mt-7 ">
+        Docs
+        <BookOpenText/>
       </h1>
-      </div>
-      <section class="  text-white max-w-4xl m-auto pt-5 flex flex-col gap-4">
+
+      <section class=" text-white max-w-4xl m-auto pt-5 flex flex-col gap-4" id="introduccion">
+
         <h2 class="text-3xl font-semibold mb-1">Introduccion</h2>
-        <p class="italic text-gray-400 text-lg mb-2">Accsesible, Personalizable, Open Source</p>
-
-        <p>Esta <strong>NO</strong> es una biblioteca de componentes. Es una coleccion de componentes reutilizables que puedes copiar y pegar en tus aplicaciones.</p>
-
-        <strong >Que significa que no es una biblioteca de componentes</strong>
-        <p>Significa que no lo instalas como una dependencia. No está disponible ni se distribuye a través de npm.</p>
+        <p class="italic text-gray-400 text-xl ">Accsesible, Personalizable, Open Source</p>
+        <p class="text-lg">Esta <strong>NO</strong> es una biblioteca de componentes. Es una coleccion de componentes reutilizables que puedes copiar y pegar en tus aplicaciones.</p>
+        <strong >¿Que significa que no es una biblioteca de componentes?</strong>
+        <p class="text-lg">Significa que no lo instalas como una dependencia. No está disponible ni se distribuye a través de npm.</p>
 
         <div class="mt-4 flex flex-col gap-5">
           <h3 class="faq-border text-xl font-bold mb-2 pb-2">Preguntas Frecuentes</h3>
@@ -77,15 +81,77 @@ import { ArrowRight } from "lucide-react";
           </details>
         </div>
         
+      </section>
+
+      <section class="mt-11  max-w-4xl m-auto " id="componentes">
+        <h2 class="text-3xl font-semibold mb-1 text-white">Componentes</h2>
+        <p class="text-white mt-5 text-lg">Los componentes estan creados con Tailwind CSS, son accesibles y personalizables, ente ellos encontraras: </p>
+        <ul class="text-white flex flex-col gap-3 mt-4 pl-7">
+          <li class=" list-disc">
+            <span>Button</span>
+          </li>
+          <li class="list-disc">
+            <span>Card</span>
+          </li>
+          <li class="list-disc">
+            <span>Input</span>
+          </li>
+          <li class="list-disc">
+            <span>Alert</span>
+          </li>
+          <li class="list-disc">
+            <span>Form</span>
+          </li>
+          <li class="list-disc">
+            <span>Table</span>
+          </li>
+        </ul>
+        <p class="text-white mt-5 text-lg">y muchos mas...</p>
+      </section>
+
+      <section class="mt-11 pt-5 max-w-4xl m-auto " id="frameworks">
+        <h2 class="text-3xl font-semibold mb-1 text-white">Frameworks</h2>
+        <p class="text-white text-lg my-5">Elige tu framework preferido y explora los componentes disponibles.</p>
+        <div class="grid grid-cols-3 gap-5  text-white max-w-4xl m-auto pt-5">
+          <Framework
+        image="public/Angular.svg"
+        alt="Angular svg"
+        label="Angular"
+      />
+      <Framework
+        image="public/React.svg"
+        alt="React svg"
+        label="React"
+      />
+      <Framework
+        image="public/Vue.svg"
+        alt="Vue svg"
+        label="Vue"
+      />
+      <Framework
+        image="public/Svelte.svg"
+        alt="Svelte svg"
+        label="Svelte"
+      />
+      <Framework
+        image="public/Astro.svg"
+        alt="Astro svg"
+        label="Astro"
         
-        
-        
+      />
+      <Framework
+        image="public/NextJs.svg"
+        alt="NextJS svg"
+        label="Next.Js"
+      />
+        </div>
       </section>
 
     </div>
   
-  </div>
+  </section>
 </Layout>
+<Footer/>
 
 <style>
   .faq-border{
