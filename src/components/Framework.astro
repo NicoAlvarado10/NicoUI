@@ -1,10 +1,12 @@
 ---
-const {image, alt, label} = Astro.props
+const {image, alt, label, href} = Astro.props
 ---
-<article class="cursor-pointer py-8 px-28  m-auto flex flex-col gap-5 framework bg-slate-950 rounded-2xl">
-    <img src={image} alt={alt} width="80" class="frameworks-img aspect-square">
-    <span class="text-center text-gray-400">{label}</span>
-</article>
+<a href={href}>
+    <article class="cursor-pointer py-8 px-28  m-auto flex flex-col gap-5 framework bg-slate-950 rounded-2xl">
+        <img src={image} alt={alt} width="80" class="frameworks-img aspect-square">
+        <span class="text-center text-gray-400">{label}</span>
+    </article>
+</a>
 
 <style>
 .framework{
