@@ -2,12 +2,15 @@
 import Layout from "@/layout/Layout.astro";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/sections/Footer.astro";
+import { PrimaryButton } from "@/components/reactComponents/PrimaryButton";
+import { SecondaryButton } from "@/components/reactComponents/SecondaryButton";
+import { WarningButton } from "@/components/reactComponents/WarningButton"
 
 ---
-<Nav/>
+<Nav />
 <Layout>
-    <section class="max-w-7xl m-auto">
-        <aside class="float-left mt-8">
+    <section class="max-w-7xl m-auto ">
+        <aside class="float-left mt-8 fixed top-26">
             <ul class="flex flex-col gap-2">
                 <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#">Button</a></li>
                 <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#">Card</a></li>
@@ -17,32 +20,70 @@ import Footer from "@/sections/Footer.astro";
                 <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#">Table</a></li>
             </ul>
         </aside>
-        <section class=" text-white flex flex-col max-w-4xl m-auto" >
-            <div class="text-white font-semibold flex items-center gap-2 mt-7 ">
-                <h2>Docs</h2>
-                  <span>
-                      <i class="ri-arrow-right-line"></i>
-                  </span>
-                  React
-                  <span class="font-normal text-2xl">
-                      <i class="ri-reactjs-fill "></i>
-                  </span>
-            </div>
-  
-          <h1 class="text-3xl font-semibold mt-3">Instalación React</h1>
-          
+        <section class="text-white flex flex-col max-w-4xl m-auto">
 
-         
-          
-          
+            <div class="text-white font-semibold flex items-center gap-2 mt-7">
+                <h2>Docs</h2>
+                <span><i class="ri-arrow-right-line"></i></span>
+                React
+                <span class="font-normal text-2xl"><i class="ri-reactjs-fill"></i></span>
+            </div>
+
+            <h1 class="text-3xl font-semibold mt-3">Instalación React</h1>
+            <p class="text-gray-400 mt-2">Para comenzar sigue estos pasos:</p>
+
+            <div class="relative mt-8">
+
+                <div class="absolute left-4  h-full w-0.5 bg-gray-500"></div>
+
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        1</div>
+                        <div class="ml-8">
+                            <h2 class="text-lg">Inicia un proyecto React</h2>
+                            <pre >
+                                <code class="flex items-center bg-gray-800 py-2 px-2 rounded-md">                               
+                                <span style="color:#B392F0;">$ </span>
+                                <span> npm create vite@latest</span>
+                                </code>
+                             </pre>
+                        </div>
+                        
+                </div>
+
+
+                <div class="flex items-center mb-8">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        2</div>
+                        <div class="ml-8">
+                            <h2 class="text-lg">Instala Tailwind CSS</h2>
+                            <pre >
+                                <code class="flex  bg-gray-800 py-2 px-2 rounded-md ">                               
+                                <span style="color:#B392F0;">$ </span>
+                                <span> npm install -D tailwindcss <br> npx tailwindcss init</span>
+                                </code>
+                            </pre>
+                            <p class="text-white">Recuerda hacer todas las importaciones...</p>
+                        </div>
+                        
+                </div>
+
+
+                <div class="flex items-center mb-8">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        3</div>
+                        <div class="ml-8">
+                            <h2 class="text-lg">Crea una carpeta "components" en el "src" del proyecto</h2>
+                            <p class="text-white mt-2">Elige el componente que desees y agregalo a la carpeta</p>
+                        </div>
+                        
+                </div>
+            </div>
+
         </section>
-  
+
        
-  
-       
-  
-      </div>
-    
     </section>
 </Layout>
-<Footer/>
+<Footer />
+
