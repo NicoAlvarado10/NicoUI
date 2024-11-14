@@ -1,0 +1,450 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ComponentsLayout from "../layouts/ComponentsLayout.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
+import PrimaryButton from "../components/astroComponents/button/PrimaryButton.astro";
+import SecondaryButton from "../components/astroComponents/button/SecondaryButton.astro";
+import ThirdButton from "../components/astroComponents/button/ThirdButton.astro";
+import PrimaryCard from "../components/astroComponents/card/PrimaryCard.astro";
+import SecondaryCard from "../components/astroComponents/card/SecondaryCard.astro";
+import ThirdCard from "../components/astroComponents/card/ThirdCard.astro";
+import Alert from "../components/astroComponents/alert/Alert.astro";
+import PrimaryInput from "../components/astroComponents/input/PrimaryInput.astro";
+import PrimaryForm from "../components/astroComponents/form/PrimaryForm.astro";
+import SecondaryForm from "../components/astroComponents/form/SecondaryForm.astro";
+import ThirdForm from "../components/astroComponents/form/ThirdForm.astro";
+import PrimaryTable from "../components/astroComponents/table/PrimaryTable.astro";
+import SecondaryInput from "../components/astroComponents/input/SecondaryInput.astro";
+import SecondaryTable from "../components/astroComponents/table/PrimaryTable.astro";
+
+
+const buttonPrimaryAstro = `
+
+---
+
+---
+
+<button
+  class="bg-black text-white font-semibold py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-gray-500"
+  aria-label="Boton"
+>
+  Boton
+</button>
+
+`;
+const buttonSecondaryAstro = `
+---
+
+---
+
+<button
+  class="bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg border border-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200"
+  aria-label="Boton Secondary"
+>
+  Boton
+</button>
+
+`;
+const buttonWarningAstro = `
+---
+
+---
+
+<button
+  class="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300 transition duration-200"
+  aria-label="Boton Warning"
+>
+  Boton
+</button>
+
+`;
+
+const primaryCardAstro = `
+---
+
+---
+
+<article class="flex flex-col rounded-lg py-3 transition duration-150 shadow-lg hover:shadow-2xl">
+  <div class="flex items-center gap-4 bg-rose-500 py-4 px-3">
+    <span class="py-2 px-3 rounded-full border-solid border-white bg-white">
+      <i class="ri-user-fill text-slate-400 text-xl"></i>
+    </span>
+    <div>
+      <h3 class="text-white font-bold">Jane Doe</h3>
+      <p class="text-white">Diseñadora UI/UX</p>
+    </div>
+  </div>
+  <div class="p-3 flex flex-col gap-2">
+    <p class="text-slate-600">Creando experiencias de usuario intuitivas y atractivas.</p>
+    <ul class="flex items-center gap-4">
+      <li><span class="font-bold text-sm">UI/UX</span></li>
+      <li><span class="font-bold text-sm">Figma</span></li>
+      <li><span class="font-bold text-sm">Sketch</span></li>
+    </ul>
+  </div>
+  <div class="py-2 px-4 flex items-center justify-between">
+    <a class="bg-slate-300 cursor-pointer py-2 px-4 rounded-md transition duration-150 hover:bg-slate-400">Ver perfil</a>
+    <a class="bg-neutral-950 text-white py-2 px-4 rounded-md transition duration-150 hover:bg-neutral-900" href="#">Conectar</a>
+  </div>
+</article>
+
+`;
+const secondaryCardAstro = `
+---
+
+---
+
+<article class="flex flex-col w-96 rounded-2xl gap-2 shadow-xl py-4 transition duration-150 hover:shadow-2xl">
+  <img src="/React.svg" alt="react-svg" class="bg-slate-200 w-full h-52" />
+  <div class="flex px-3 items-center gap-3 pt-2">
+    <span class="text-base font-bold">Tecnologia</span>
+    <span class="text-sm text-slate-500">Lectura 5 min</span>
+  </div>
+  <div class="flex flex-col gap-1 px-3">
+    <h3 class="text-2xl font-semibold">El futuro de la IA en el desarrollo web</h3>
+    <p class="text-slate-600">Descubre cómo la inteligencia artificial está transformando la manera en que diseñamos y desarrollamos sitios web.</p>
+  </div>
+  <div class="flex justify-between px-3">
+    <span class="flex gap-2 items-center text-sm"><i class="ri-user-fill"></i>Por Alex Brown</span>
+    <a href="#" class="text-cyan-500 transition duration-150 hover:underline font-bold">Leer más</a>
+  </div>
+</article>
+
+`;
+const thirdCardAstro = `
+---
+
+---
+
+<article class="flex flex-col w-96 rounded-2xl gap-2 shadow-xl py-4 transition duration-150 hover:shadow-2xl">
+  <img src="/React.svg" alt="react-svg" class="bg-slate-200 w-full h-52" />
+  <div class="flex px-3 items-center gap-3 pt-2">
+    <span class="text-base font-bold">Tecnologia</span>
+    <span class="text-sm text-slate-500">Lectura 5 min</span>
+  </div>
+  <div class="flex flex-col gap-1 px-3">
+    <h3 class="text-2xl font-semibold">El futuro de la IA en el desarrollo web</h3>
+    <p class="text-slate-600">Descubre cómo la inteligencia artificial está transformando la manera en que diseñamos y desarrollamos sitios web.</p>
+  </div>
+  <div class="flex justify-between px-3">
+    <span class="flex gap-2 items-center text-sm"><i class="ri-user-fill"></i>Por Alex Brown</span>
+    <a href="#" class="text-cyan-500 transition duration-150 hover:underline font-bold">Leer más</a>
+  </div>
+</article>
+
+`;
+
+const primaryInputAstro = `
+---
+
+---
+
+<div class="space-y-2 w-full max-w-md">
+  <label for="email" class="block font-medium text-gray-700">Email</label>
+  <input
+    type="email"
+    id="email"
+    placeholder="Enter your email"
+    class="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 border-gray-300 focus:ring-blue-500"
+    onInput="handleEmailChange(event)"
+  />
+</div>
+
+<script>
+  let email = '';
+
+  function handleEmailChange(event) {
+    email = event.target.value;
+    console.log(email); // Opcional: para verificar el valor actualizado en la consola
+  }
+</script>
+
+
+`;
+const secondaryInputAstro = `
+---
+
+---
+
+<div class="space-y-2 w-full max-w-md">
+  <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+  <div class="relative">
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter your password"
+      class="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 border-gray-300 focus:ring-blue-500"
+    />
+    <button
+      type="button"
+      class="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+      aria-label="Show password"
+      onClick="togglePasswordVisibility()"
+    >
+      <i class="ri-eye-line h-4 w-4" aria-hidden="true" id="toggleIcon"></i>
+    </button>
+  </div>
+</div>
+
+`;
+
+const primaryAlertAstro = `
+---
+
+---
+
+<div class="flex items-center p-3 rounded-2xl bg-blue-100 text-blue-700" role="alert">
+  <i class="ri-information-line mr-2"></i>
+  <span>This is an informational alert message.</span>
+</div>
+
+
+`;
+
+const primaryFormAstro = `
+---
+
+---
+
+<div class="w-full max-w-xs mx-auto border rounded p-4 transition duration-150 shadow-xl hover:shadow-2xl">
+  <h2 class="text-xl font-bold mb-2">Login</h2>
+  <p class="text-gray-600 mb-4 max-sm:text-base">Enter your credentials to access your account</p>
+  <form class="space-y-4">
+    <div class="space-y-2">
+      <label for="email" class="block font-medium">Email</label>
+      <div class="relative">
+        <i class="ri-mail-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="email" type="email" placeholder="Enter your email" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <div class="space-y-2">
+      <label for="password" class="block font-medium">Password</label>
+      <div class="relative">
+        <i class="ri-lock-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="password" type="password" placeholder="Enter your password" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <button type="submit" class="w-full bg-blue-500 transition duration-150 hover:bg-blue-700 text-white p-2 rounded mt-4">Log In</button>
+  </form>
+</div>
+
+
+`;
+const secondaryFormAstro = `
+---
+
+---
+
+<div class="w-full max-w-2xl mx-auto border rounded p-4 shadow-xl hover:shadow-2xl">
+  <h2 class="text-xl font-bold mb-2">Contact Us</h2>
+  <p class="text-gray-600 mb-4">Send us a message and we will get back to you as soon as possible</p>
+  <form class="space-y-4">
+    <div class="space-y-2">
+      <label for="name" class="block font-medium">Name</label>
+      <div class="relative">
+        <i class="ri-user-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="name" placeholder="Enter your name" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <div class="space-y-2">
+      <label for="message" class="block font-medium">Message</label>
+      <textarea id="message" placeholder="Type your message here" class="w-full p-2 border rounded"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-blue-500 transition duration-150 hover:bg-blue-700 text-white p-2 rounded mt-4">
+      <i class="ri-send-plane-line mr-2"></i>
+      Send Message
+    </button>
+  </form>
+</div>
+
+
+
+`;
+const thirdFormAstro = `
+---
+
+---
+
+<div class="w-full shadow-xl hover:shadow-2xl max-w-md mx-auto border rounded p-4">
+  <h2 class="text-xl font-bold mb-2">Subscribe to Our Newsletter</h2>
+  <p class="text-gray-600 mb-4">Stay updated with our latest news</p>
+  <form class="space-y-4">
+    <label class="block font-medium">Choose your plan</label>
+    <div class="space-y-2">
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="basic" class="mr-2" checked />
+        Basic
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="premium" class="mr-2" />
+        Premium
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="pro" class="mr-2" />
+        Pro
+      </label>
+    </div>
+    <button type="submit" class="w-full transition duration-150 hover:bg-blue-700 bg-blue-500 text-white p-2 rounded mt-4">
+      <i class="ri-check-line mr-2"></i>
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+`;
+
+const primaryTableAstro = `
+---
+
+---
+
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+  <table class="min-w-full text-sm text-left text-gray-600">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="px-6 py-3">#</th>
+        <th class="px-6 py-3">Name</th>
+        <th class="px-6 py-3">Age</th>
+        <th class="px-6 py-3">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-6 py-3">1</td>
+        <td class="px-6 py-3">John Doe</td>
+        <td class="px-6 py-3">25</td>
+        <td class="px-6 py-3">USA</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="px-6 py-3">2</td>
+        <td class="px-6 py-3">Jane Smith</td>
+        <td class="px-6 py-3">30</td>
+        <td class="px-6 py-3">Canada</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+`;
+const secondaryTableAstro = `
+---
+
+---
+
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+  <div class="flex justify-between items-center p-4">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="px-4 py-2 border rounded-lg text-sm w-1/4"
+    />
+    <div class="flex space-x-2">
+      <button class="px-4 py-2 bg-blue-500 text-white text-sm rounded">Filter</button>
+      <button class="px-4 py-2 bg-gray-500 text-white text-sm rounded">Reset</button>
+    </div>
+  </div>
+
+  <table class="min-w-full text-sm text-left text-gray-600">
+    <thead class="bg-blue-100">
+      <tr>
+        <th class="px-6 py-3">#</th>
+        <th class="px-6 py-3">Name</th>
+        <th class="px-6 py-3">Age</th>
+        <th class="px-6 py-3">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-6 py-3">1</td>
+        <td class="px-6 py-3">John Doe</td>
+        <td class="px-6 py-3">25</td>
+        <td class="px-6 py-3">USA</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="px-6 py-3">2</td>
+        <td class="px-6 py-3">Jane Smith</td>
+        <td class="px-6 py-3">30</td>
+        <td class="px-6 py-3">Canada</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="flex justify-between items-center p-4">
+    <div class="text-sm">Showing 1 to 2 of 50 entries</div>
+    <div class="space-x-2">
+      <button class="px-4 py-2 border rounded">Previous</button>
+      <button class="px-4 py-2 border rounded">Next</button>
+    </div>
+  </div>
+</div>
+
+`;
+---
+
+<Layout title="NicoUI | Astro">
+    <section class="max-w-7xl m-auto pt-24 max-xl:px-5 max-sm:px-0 ">
+
+      <aside class="float-left mt-8 fixed h-full top-26 max-xl:hidden ">
+        <ul class="flex flex-col gap-2">
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#buttonAstro">Button</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#cardAstro">Card</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#inputAstro">Input</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#alertAstro">Alert</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formAstro">Form</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableAstro">Table</a></li>
+        </ul>
+    </aside>
+
+        <DocsLayout
+          guia="npm create astro@latest"
+          framework="Astro"
+          icon="ri-code-view"
+        />
+
+        <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 scroll-mt-48 max-sm:px-3"  id="buttonAstro" >
+            <h2 class="text-white text-2xl font-semibold pb-5 ">Botones</h2>
+           <ComponentsLayout client:visible Component={PrimaryButton} Copy={buttonPrimaryAstro} Code={buttonPrimaryAstro}/>
+           
+           <ComponentsLayout client:visible Component={SecondaryButton} Copy={buttonSecondaryAstro}  Code={buttonSecondaryAstro}/>
+           <ComponentsLayout client:visible Component={ThirdButton} Copy={buttonWarningAstro} Code={buttonWarningAstro}/>
+        </section>
+  
+        <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="cardAstro">
+            <h2 class="text-white text-2xl font-semibold pb-5">Cards</h2>
+           <ComponentsLayout client:visible Component={PrimaryCard } Code={primaryCardAstro} Copy={primaryCardAstro}/>
+           <ComponentsLayout client:visible Component={SecondaryCard} Code={secondaryCardAstro} Copy={secondaryCardAstro}/>
+           <ComponentsLayout client:visible Component={ThirdCard} Code={thirdCardAstro} Copy={thirdCardAstro}/>
+          </section>
+  
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="inputAstro">
+            <h2 class="text-white text-2xl font-semibold pb-5">Inputs</h2>
+           <ComponentsLayout client:visible Component={PrimaryInput } Code={primaryInputAstro} Copy={primaryInputAstro}/>
+           <ComponentsLayout client:visible Component={SecondaryInput} Code={secondaryInputAstro} Copy={secondaryInputAstro}/>
+          
+          </section>
+
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="alertAstro">
+            <h2 class="text-white text-2xl font-semibold pb-5">Alert</h2>
+           <ComponentsLayout client:visible Component={Alert } Code={primaryAlertAstro} Copy={primaryAlertAstro}/>
+          
+          </section>
+  
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="formAstro">
+            <h2 class="text-white text-2xl font-semibold pb-5">Forms</h2 >
+           <ComponentsLayout client:visible Component={PrimaryForm } Code={primaryFormAstro} Copy={primaryFormAstro}/>
+           <ComponentsLayout client:visible Component={SecondaryForm } Code={secondaryFormAstro} Copy={secondaryFormAstro}/>
+           <ComponentsLayout client:visible Component={ThirdForm } Code={thirdFormAstro} Copy={thirdFormAstro}/>
+          
+          </section>
+
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="tableAstro">
+            <h2 class="text-white text-2xl font-semibold pb-5">Tables</h2>
+           <ComponentsLayout client:visible Component={PrimaryTable } Code={primaryTableAstro} Copy={primaryTableAstro}/>
+           <ComponentsLayout client:visible Component={SecondaryTable } Code={secondaryTableAstro} Copy={secondaryTableAstro}/>
+       
+          
+          </section>
+    </section>
+</Layout>
