@@ -1,4 +1,6 @@
 ---
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
+import 'remixicon/fonts/remixicon.css';
 interface Props {
 	title: string;
 }
@@ -7,44 +9,45 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<meta name="author" content="Nicolás Alvarado">
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Librería de componentes UI flexible y personalizable para construir interfaces de usuario atractivas y funcionales. Optimizada para rendimiento y fácil de usar." />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="keywords" content="librería de componentes, componentes UI, interfaz de usuario, componentes web, desarrollo frontend, diseño de interfaces, accesibilidad, librería de UI, componentes personalizables, diseño responsivo">
+		<link rel="icon" href="/Icon.svg" type="image/svg+xml">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions/>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-black">
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+html, body{
+	scroll-behavior: smooth;
+}
+img{
+	display: flex;
+	max-width: 100%;
+}
 </style>
