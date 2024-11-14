@@ -1,0 +1,92 @@
+---
+const {framework, guia, icon} = Astro.props
+---
+     
+        <section class="text-white flex flex-col max-w-4xl m-auto ">
+
+            <div class="text-white font-semibold flex items-center gap-2 mt-7 max-sm:px-5">
+                <h2>Docs</h2>
+                <span><i class="ri-arrow-right-line "></i></span>
+                {framework}
+                <span class="font-normal text-2xl"><i class={icon}></i></span>
+            </div>
+
+            <h1 class="text-3xl font-semibold mt-3 max-sm:px-5">Instalación {framework}</h1>
+            <p class="text-white mt-1 max-sm:px-5">Para comenzar sigue estos pasos:</p>
+            <span class="text-gray-400 mt-2 italic max-sm:px-5">*La guia usa npm pero puedes usar tu empaquetador preferido*</span>
+
+            <div class="relative  mt-8   ">
+
+                <div class="absolute left-4  h-full w-0.5  bg-gray-500 max-sm:left-6"></div>
+
+                <div class="flex items-center max-sm:px-3 mb-4 ">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        1</div>
+                        <div class="ml-8 flex
+                        flex-col max-sm:ml-3">
+                            <h2 class="text-lg">Inicia un proyecto {framework}</h2>
+                            <pre >
+                                <code class="flex  bg-gray-800 py-2 px-2 rounded-md  max-sm:w-11/12 max-sm:m-auto text-balance">                               
+                                    <span style="color:#B392F0;">$ </span>
+                                    <span> {guia}<br> npm install</span>
+                                    </code>
+                             </pre>
+                            
+                        </div>
+                        
+                </div>
+
+
+                <div class="flex items-center max-sm:px-3 mb-4 ">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        2</div>
+                        <div class="ml-8 flex
+                        flex-col max-sm:ml-3">
+                            <h2 class="text-lg">Instala Tailwind CSS</h2>
+                            <pre >
+                                <code class="flex  bg-gray-800 py-2 px-2 rounded-md  max-sm:w-11/12 max-sm:m-auto">                               
+                                    <span style="color:#B392F0;">$ </span>
+                                    <span class="text-balance"> npm install -D tailwindcss postcss autoprefixer
+                                        <br>npx tailwindcss init
+                                    </span>
+                                    </code>
+                             </pre>
+                            
+                        </div>
+                        
+                </div>
+
+                <div class="flex items-center max-sm:px-3 mb-4 ">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        3</div>
+                        <div class="ml-8 flex
+                        flex-col">
+                            <h2 class="text-lg">Instala Remixicon</h2>
+                            <pre >
+                                <code class="flex  bg-gray-800 py-2 px-2 rounded-md  max-sm:w-11/12 max-sm:m-auto">                               
+                                    <span style="color:#B392F0;">$ </span>
+                                    <span class="text-balance max-sm:w-10/12 m-auto"> npm install remixicon
+                                    </span>
+                                    </code>
+                             </pre>
+                            
+                        </div>
+                        
+                </div>
+
+
+                <div class="flex items-center mb-8 max-sm:px-3">
+                    <div class="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full text-white font-bold z-10">
+                        4</div>
+                        <div class="ml-8 max-sm:ml-3 ">
+                            <h2 class="text-lg  max-sm:w-11/12 max-sm:m-auto">Crea una carpeta "components" en el "src" del proyecto</h2>
+                            <p class="text-white mt-2   max-sm:w-11/12 max-sm:m-auto">Elige el componente que desees y agregalo a la carpeta</p>
+                        </div>
+                        
+                </div>
+            </div>
+          
+    
+            
+        </section>
+    
