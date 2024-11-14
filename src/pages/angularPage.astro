@@ -1,0 +1,586 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ComponentsLayout from "../layouts/ComponentsLayout.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
+import PrimaryButton from "../components/astroComponents/button/PrimaryButton.astro";
+import SecondaryButton from "../components/astroComponents/button/SecondaryButton.astro";
+import ThirdButton from "../components/astroComponents/button/ThirdButton.astro";
+import PrimaryCard from "../components/astroComponents/card/PrimaryCard.astro";
+import SecondaryCard from "../components/astroComponents/card/SecondaryCard.astro";
+import ThirdCard from "../components/astroComponents/card/ThirdCard.astro";
+import Alert from "../components/astroComponents/alert/Alert.astro";
+import PrimaryInput from "../components/astroComponents/input/PrimaryInput.astro";
+import PrimaryForm from "../components/astroComponents/form/PrimaryForm.astro";
+import SecondaryForm from "../components/astroComponents/form/SecondaryForm.astro";
+import ThirdForm from "../components/astroComponents/form/ThirdForm.astro";
+import PrimaryTable from "../components/astroComponents/table/PrimaryTable.astro";
+import SecondaryInput from "../components/astroComponents/input/SecondaryInput.astro";
+import SecondaryTable from "../components/astroComponents/table/PrimaryTable.astro";
+
+
+const buttonPrimaryAngular = `
+// src/app/components/primary-button/primary-button.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-button',
+  templateUrl: './primary-button.component.html',
+  styleUrls: ['./primary-button.component.css']
+})
+export class PrimaryButtonComponent {
+  // Aquí puedes agregar lógica si es necesario.
+}
+
+<!-- src/app/components/primary-button/primary-button.component.html -->
+<button
+  class="bg-black text-white font-semibold py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-gray-500"
+  aria-label="Boton"
+>
+  Boton
+</button>
+
+
+`;
+const buttonSecondaryAngular = `
+// src/app/components/secondary-button/secondary-button.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-secondary-button',
+  templateUrl: './secondary-button.component.html',
+  styleUrls: ['./secondary-button.component.css']
+})
+export class SecondaryButtonComponent {
+  // Aquí puedes agregar lógica si es necesario.
+}
+
+<!-- src/app/components/secondary-button/secondary-button.component.html -->
+<button
+  class="bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg border border-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200"
+  aria-label="Boton Secondary"
+>
+  Boton
+</button>
+
+`;
+const buttonWarningAngular = `
+// src/app/components/warning-button/warning-button.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-warning-button',
+  templateUrl: './warning-button.component.html',
+  styleUrls: ['./warning-button.component.css']
+})
+export class WarningButtonComponent {
+  // Aquí puedes agregar lógica si es necesario.
+}
+
+<!-- src/app/components/warning-button/warning-button.component.html -->
+<button
+  class="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300 transition duration-200"
+  aria-label="Boton Warning"
+>
+  Boton
+</button>
+
+`;
+
+const primaryCardAngular = `
+// src/app/components/primary-card/primary-card.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-card',
+  templateUrl: './primary-card.component.html',
+  styleUrls: ['./primary-card.component.css']
+})
+export class PrimaryCardComponent {
+  // Puedes agregar lógica si es necesario en el futuro
+}
+
+<!-- src/app/components/primary-card/primary-card.component.html -->
+<article class="flex flex-col rounded-lg py-3 transition duration-150 shadow-lg hover:shadow-2xl">
+  <div class="flex items-center gap-4 bg-rose-500 py-4 px-3">
+    <span class="py-2 px-3 rounded-full border-solid border-white bg-white">
+      <i class="ri-user-fill text-slate-400 text-xl"></i>
+    </span>
+    <div>
+      <h3 class="text-white font-bold">Jane Doe</h3>
+      <p class="text-white">Diseñadora UI/UX</p>
+    </div>
+  </div>
+
+  <div class="p-3 flex flex-col gap-2">
+    <p class="text-slate-600">Creando experiencias de usuario intuitivas y atractivas.</p>
+    <ul class="flex items-center gap-4">
+      <li><span class="font-bold text-sm">UI/UX</span></li>
+      <li><span class="font-bold text-sm">Figma</span></li>
+      <li><span class="font-bold text-sm">Sketch</span></li>
+    </ul>
+  </div>
+
+  <div class="py-2 px-4 flex items-center justify-between">
+    <a class="bg-slate-300 cursor-pointer py-2 px-4 rounded-md transition duration-150 hover:bg-slate-400">Ver perfil</a>
+    <a class="bg-neutral-950 text-white py-2 px-4 rounded-md transition duration-150 hover:bg-neutral-900" href="#">Conectar</a>
+  </div>
+</article>
+
+`;
+const secondaryCardAngular = `
+
+// src/app/components/Secondary-card/Secondary-card.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-Secondary-card',
+  templateUrl: './Secondary-card.component.html',
+  styleUrls: ['./Secondary-card.component.css']
+})
+export class SecondaryCardComponent {
+  // Puedes agregar lógica si es necesario en el futuro
+}
+
+<!-- src/app/components/secondary-card/secondary-card.component.html -->
+<article class="flex flex-col w-96 rounded-2xl gap-2 shadow-xl py-4 transition duration-150 hover:shadow-2xl">
+  <img src="/React.svg" alt="react-svg" class="bg-slate-200 w-full h-52" />
+  <div class="flex px-3 items-center gap-3 pt-2">
+    <span class="text-base font-bold">Tecnología</span>
+    <span class="text-sm text-slate-500">Lectura 5 min</span>
+  </div>
+  <div class="flex flex-col gap-1 px-3">
+    <h3 class="text-2xl font-semibold">El futuro de la IA en el desarrollo web</h3>
+    <p class="text-slate-600">Descubre cómo la inteligencia artificial está transformando la manera en que diseñamos y desarrollamos sitios web.</p>
+  </div>
+  <div class="flex justify-between px-3">
+    <span class="flex gap-2 items-center text-sm">
+      <i class="ri-user-fill"></i>Por Alex Brown
+    </span>
+    <a href="#" class="text-cyan-500 transition duration-150 hover:underline font-bold">Leer más</a>
+  </div>
+</article>
+
+`;
+const thirdCardAngular = `
+// src/app/components/third-card/third-card.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-third-card',
+  templateUrl: './third-card.component.html',
+  styleUrls: ['./third-card.component.css']
+})
+export class ThirdCardComponent {
+  // Puedes agregar lógica aquí si es necesario
+}
+
+<!-- src/app/components/third-card/third-card.component.html -->
+<div class="w-[300px] overflow-hidden bg-white rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg">
+  <div class="relative aspect-square overflow-hidden">
+    <img
+      src="/React.svg"
+      alt="react-svg"
+      class="w-full opacity-60 h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+    />
+    <span class="absolute top-2 right-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">New</span>
+  </div>
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2">Minimalist Desk Lamp</h2>
+    <p class=" text-gray-500 mb-2">Adjustable arm with warm LED light</p>
+    <div class="flex items-center justify-between px-1">
+      <span class="text-lg font-bold">$89.99</span>
+      <div class="flex items-center">
+        <i class="ri-star-fill text-yellow-400 h-4 w-4" aria-hidden="true"></i>
+        <span class="ml-1 text-sm">4.8 <span class="sr-only">(out of 5 stars)</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="p-4 pt-0">
+    <button
+      class="w-full flex items-center justify-center bg-blue-600 text-white py-2 rounded transition-transform duration-300 ease-in-out group hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+      aria-label="Add Minimalist Desk Lamp to cart"
+    >
+      Add to Cart
+      <i class="ri-add-line ml-2 h-4 w-4 transition-transform duration-300 ease-in-out group-hover:rotate-180" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+`;
+
+const primaryInputAngular = `
+// src/app/components/primary-input/primary-input.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-input',
+  templateUrl: './primary-input.component.html',
+  styleUrls: ['./primary-input.component.css']
+})
+export class PrimaryInputComponent {
+  email: string = '';
+
+  handleEmailChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.email = input.value;
+  }
+}
+
+<!-- src/app/components/primary-input/primary-input.component.html -->
+<div class="space-y-2 w-full max-w-md">
+  <label for="email" class="block font-medium text-gray-700">Email</label>
+  <input
+    type="email"
+    id="email"
+    placeholder="Enter your email"
+    [value]="email"
+    (input)="handleEmailChange($event)"
+    class="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 border-gray-300 focus:ring-blue-500"
+  />
+</div>
+
+
+`;
+const secondaryInputAngular = `
+// src/app/components/secondary-input/secondary-input.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-secondary-input',
+  templateUrl: './secondary-input.component.html',
+  styleUrls: ['./secondary-input.component.css']
+})
+export class SecondaryInputComponent {
+  password: string = '';
+  showPassword: boolean = false;
+
+  handlePasswordChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.password = input.value;
+  }
+
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
+}
+
+<!-- src/app/components/secondary-input/secondary-input.component.html -->
+<div class="space-y-2 w-full max-w-md">
+  <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+  <div class="relative">
+    <input
+      type="{{ showPassword ? 'text' : 'password' }}"
+      id="password"
+      placeholder="Enter your password"
+      [value]="password"
+      (input)="handlePasswordChange($event)"
+      class="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 border-gray-300 focus:ring-blue-500"
+    />
+    <button
+      type="button"
+      class="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+      (click)="togglePasswordVisibility()"
+      [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+    >
+      <i *ngIf="showPassword" class="ri-eye-off-line h-4 w-4" aria-hidden="true"></i>
+      <i *ngIf="!showPassword" class="ri-eye-line h-4 w-4" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+`;
+
+const primaryAlertAngular = `
+// src/app/components/primary-alert/primary-alert.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-alert',
+  templateUrl: './primary-alert.component.html',
+  styleUrls: ['./primary-alert.component.css']
+})
+export class PrimaryAlertComponent {}
+
+<!-- src/app/components/primary-alert/primary-alert.component.html -->
+<div class="flex items-center p-3 rounded-2xl bg-blue-100 text-blue-700" role="alert">
+  <i class="ri-information-line mr-2"></i>
+  <span>This is an informational alert message.</span>
+</div>
+
+`;
+
+const primaryFormAngular = `
+// src/app/components/primary-form/primary-form.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-form',
+  templateUrl: './primary-form.component.html',
+  styleUrls: ['./primary-form.component.css']
+})
+export class PrimaryFormComponent {}
+
+<!-- src/app/components/primary-form/primary-form.component.html -->
+<div class="w-full max-w-xs mx-auto border rounded p-4 transition duration-150 shadow-xl hover:shadow-2xl">
+  <h2 class="text-xl font-bold mb-2">Login</h2>
+  <p class="text-gray-600 mb-4 max-sm:text-base">Enter your credentials to access your account</p>
+  <form class="space-y-4">
+    <div class="space-y-2">
+      <label for="email" class="block font-medium">Email</label>
+      <div class="relative">
+        <i class="ri-mail-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="email" type="email" placeholder="Enter your email" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <div class="space-y-2">
+      <label for="password" class="block font-medium">Password</label>
+      <div class="relative">
+        <i class="ri-lock-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="password" type="password" placeholder="Enter your password" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <button type="submit" class="w-full bg-blue-500 transition duration-150 hover:bg-blue-700 text-white p-2 rounded mt-4">Log In</button>
+  </form>
+</div>
+
+`;
+const secondaryFormAngular = `
+// src/app/components/secondary-form/secondary-form.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-secondary-form',
+  templateUrl: './secondary-form.component.html',
+  styleUrls: ['./secondary-form.component.css']
+})
+export class SecondaryFormComponent {}
+
+<!-- src/app/components/secondary-form/secondary-form.component.html -->
+<div class="w-full max-w-2xl mx-auto border rounded p-4 shadow-xl hover:shadow-2xl">
+  <h2 class="text-xl font-bold mb-2">Contact Us</h2>
+  <p class="text-gray-600 mb-4">Send us a message and we will get back to you as soon as possible</p>
+  <form class="space-y-4">
+    <div class="space-y-2">
+      <label for="name" class="block font-medium">Name</label>
+      <div class="relative">
+        <i class="ri-user-line absolute left-3 top-3 text-gray-400"></i>
+        <input id="name" placeholder="Enter your name" class="w-full pl-10 p-2 border rounded" />
+      </div>
+    </div>
+    <div class="space-y-2">
+      <label for="message" class="block font-medium">Message</label>
+      <textarea id="message" placeholder="Type your message here" class="w-full p-2 border rounded"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-blue-500 transition duration-150 hover:bg-blue-700 text-white p-2 rounded mt-4">
+      <i class="ri-send-plane-line mr-2"></i>
+      Send Message
+    </button>
+  </form>
+</div>
+
+`;
+const thirdFormAngular = `
+// src/app/components/subscription-form/subscription-form.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-subscription-form',
+  templateUrl: './subscription-form.component.html',
+  styleUrls: ['./subscription-form.component.css']
+})
+export class SubscriptionFormComponent {}
+
+<!-- src/app/components/subscription-form/subscription-form.component.html -->
+<div class="w-full shadow-xl hover:shadow-2xl max-w-md mx-auto border rounded p-4">
+  <h2 class="text-xl font-bold mb-2">Subscribe to Our Newsletter</h2>
+  <p class="text-gray-600 mb-4">Stay updated with our latest news</p>
+  <form class="space-y-4">
+    <label class="block font-medium">Choose your plan</label>
+    <div class="space-y-2">
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="basic" class="mr-2" checked />
+        Basic
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="premium" class="mr-2" />
+        Premium
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="plan" value="pro" class="mr-2" />
+        Pro
+      </label>
+    </div>
+    <button type="submit" class="w-full transition duration-150 hover:bg-blue-700 bg-blue-500 text-white p-2 rounded mt-4">
+      <i class="ri-check-line mr-2"></i>
+      Subscribe
+    </button>
+  </form>
+</div>
+
+`;
+
+const primaryTableAngular = `
+// src/app/components/primary-table/primary-table.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-primary-table',
+  templateUrl: './primary-table.component.html',
+  styleUrls: ['./primary-table.component.css']
+})
+export class PrimaryTableComponent {}
+
+<!-- src/app/components/primary-table/primary-table.component.html -->
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+  <table class="min-w-full text-sm text-left text-gray-600">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="px-6 py-3">#</th>
+        <th class="px-6 py-3">Name</th>
+        <th class="px-6 py-3">Age</th>
+        <th class="px-6 py-3">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-6 py-3">1</td>
+        <td class="px-6 py-3">John Doe</td>
+        <td class="px-6 py-3">25</td>
+        <td class="px-6 py-3">USA</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="px-6 py-3">2</td>
+        <td class="px-6 py-3">Jane Smith</td>
+        <td class="px-6 py-3">30</td>
+        <td class="px-6 py-3">Canada</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+`;
+const secondaryTableAngular = `
+// src/app/components/secondary-table/secondary-table.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-secondary-table',
+  templateUrl: './secondary-table.component.html',
+  styleUrls: ['./secondary-table.component.css']
+})
+export class SecondaryTableComponent {
+  searchTerm: string = '';
+}
+
+<!-- src/app/components/secondary-table/secondary-table.component.html -->
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+  <div class="flex justify-between items-center p-4">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="px-4 py-2 border rounded-lg text-sm w-1/4"
+      [(ngModel)]="searchTerm"  <!-- Angular two-way binding for search term -->
+    />
+    <div class="flex space-x-2">
+      <button class="px-4 py-2 bg-blue-500 text-white text-sm rounded">Filter</button>
+      <button class="px-4 py-2 bg-gray-500 text-white text-sm rounded">Reset</button>
+    </div>
+  </div>
+  
+  <table class="min-w-full text-sm text-left text-gray-600">
+    <thead class="bg-blue-100">
+      <tr>
+        <th class="px-6 py-3">#</th>
+        <th class="px-6 py-3">Name</th>
+        <th class="px-6 py-3">Age</th>
+        <th class="px-6 py-3">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-6 py-3">1</td>
+        <td class="px-6 py-3">John Doe</td>
+        <td class="px-6 py-3">25</td>
+        <td class="px-6 py-3">USA</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="px-6 py-3">2</td>
+        <td class="px-6 py-3">Jane Smith</td>
+        <td class="px-6 py-3">30</td>
+        <td class="px-6 py-3">Canada</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="flex justify-between items-center p-4">
+    <div class="text-sm">Showing 1 to 2 of 50 entries</div>
+    <div class="space-x-2">
+      <button class="px-4 py-2 border rounded">Previous</button>
+      <button class="px-4 py-2 border rounded">Next</button>
+    <
+
+`;
+
+---
+
+<Layout title="NicoUI | Angular">
+  <section class="max-w-7xl m-auto pt-24 max-xl:px-5 max-sm:px-0">
+    <aside class="float-left mt-8 fixed h-full top-26 max-xl:hidden">
+      <ul class="flex flex-col gap-2">
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#buttonAngular">Button</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#cardAngular">Card</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#inputAngular">Input</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#alertAngular">Alert</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formAngular">Form</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableAngular">Table</a></li>
+      </ul>
+    </aside>
+
+    <DocsLayout
+      guia="npm install -g @angular/cli"
+      framework="Angular"
+      icon="ri-angularjs-line"
+    />
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 scroll-mt-48 max-sm:px-3" id="buttonAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Botones</h2>
+      <ComponentsLayout Component={PrimaryButton } Copy={buttonPrimaryAngular} Code={buttonPrimaryAngular} />
+      <ComponentsLayout Component={SecondaryButton } Copy={buttonSecondaryAngular} Code={buttonSecondaryAngular} />
+      <ComponentsLayout Component={ThirdButton } Copy={buttonWarningAngular} Code={buttonWarningAngular} />
+    </section>
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="inputAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Cards</h2>
+      <ComponentsLayout Component={PrimaryCard} Copy={primaryCardAngular} Code={primaryCardAngular} />
+      <ComponentsLayout Component={SecondaryCard } Copy={secondaryCardAngular} Code={secondaryCardAngular} />
+      <ComponentsLayout Component={ThirdCard } Copy={thirdCardAngular} Code={thirdCardAngular} />
+    </section>
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="inputAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Inputs</h2>
+      <ComponentsLayout Component={PrimaryInput } Code={primaryInputAngular} Copy={primaryInputAngular} />
+      <ComponentsLayout Component={SecondaryInput} Code={secondaryInputAngular} Copy={secondaryInputAngular} />
+    </section>
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="alertAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Alert</h2>
+      <ComponentsLayout Component={Alert} Code={primaryAlertAngular} Copy={primaryAlertAngular} />
+    </section>
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="formAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Forms</h2>
+      <ComponentsLayout Component={PrimaryForm } Code={primaryFormAngular} Copy={primaryFormAngular} />
+      <ComponentsLayout Component={SecondaryForm } Code={secondaryFormAngular} Copy={secondaryFormAngular} />
+      <ComponentsLayout Component={ThirdForm } Code={thirdFormAngular} Copy={thirdFormAngular} />
+    </section>
+
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="tableAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Tables</h2>
+      <ComponentsLayout Component={PrimaryTable } Code={primaryTableAngular} Copy={primaryTableAngular} />
+      <ComponentsLayout Component={SecondaryTable } Code={secondaryTableAngular} Copy={secondaryTableAngular} />
+    </section>
+
+  </section>
+</Layout>
+
+
