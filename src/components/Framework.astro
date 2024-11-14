@@ -1,0 +1,24 @@
+---
+const {image, alt, label, href} = Astro.props
+---
+<a href={href}>
+    <article class="cursor-pointer py-8 px-28  m-auto flex flex-col gap-5 framework bg-slate-950 rounded-2xl max-sm:w-full max-md:w-full">
+        <img src={image} alt={alt} loading="lazy" class="frameworks-img m-auto w-6/12 max-xl:w-10/12 flex items-center justify-center max-sm:w-1/2 " >
+        <label class="text-center flex m-auto justify-center items-center text-gray-400 ">{label}</label>
+    </article>
+</a>
+
+<style>
+.framework{
+    
+    transition:all 0.3s;
+}
+
+.framework:hover span{
+    text-decoration: underline;
+}
+.framework:hover{
+    box-shadow: 5px 5px 5px #9aaecf;
+}
+</style>
+

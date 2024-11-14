@@ -1,0 +1,56 @@
+---
+import Framework from "../components/Framework.astro";
+
+
+---
+<section class="py-20 px-8  gradient-section " id="framework">
+  <div class="max-w-7xl m-auto"> 
+
+    <h2 class="text-white text-center text-5xl">Frameworks</h2>
+    <p class="text-gray-400 text-center text-xl mt-5">NicoUI es compatible con todos los principales frameworks del desarrollo frontend.</p>
+    <div class="grid grid-cols-3 justify-center items-center mt-14 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
+      <Framework
+        image="public/Angular.svg"
+        alt="Angular svg"
+        label="Angular"
+        href="/angularPage"
+      />
+      <Framework
+        image="public/React.svg"
+        alt="React svg"
+        label="React"
+        href="/reactPage"
+      />
+      <Framework
+        image="public/Vue.svg"
+        alt="Vue svg"
+        label="Vue"
+        href="/vuePage"
+      />
+      <Framework
+        image="public/Svelte.svg"
+        alt="Svelte svg"
+        label="Svelte"
+        href="/sveltePage"
+      />
+      <Framework
+        image="public/Astro.svg"
+        alt="Astro svg"
+        label="Astro"
+        href="/astroPage"
+      />
+      <Framework
+        image="public/NextJs.svg"
+        alt="NextJS svg"
+        label="Next.Js"
+        href="/nextPage"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+        .gradient-section {
+  background: linear-gradient(to top, #0f172a 10%, #0f172a 5%, #000000 100%);
+}
+</style>
