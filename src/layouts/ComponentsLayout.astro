@@ -1,0 +1,26 @@
+---
+const { Component, Code, Copy } = Astro.props;
+import { CopyBtn } from "../components/CopyBtn";
+---
+
+<div class="flex flex-col max-w-2xl max-md:max-w-md mx-auto max-sm: w-11/12 ">
+
+ 
+  <div class="px-10 py-4 flex items-center justify-center bg-slate-100 ">
+    {Component}
+  </div>
+
+
+  <div class="relative bg-gray-900 px-10 py-6 rounded-lg overflow-auto">
+
+    <div class="absolute top-4 right-4">
+      <CopyBtn client:visible code={Copy} />
+    </div>
+
+    
+    <pre class="overflow-x-auto ">
+      <code class="language-jsx text-gray-100">{Code}</code>
+    </pre>
+  </div>
+  
+</div>
