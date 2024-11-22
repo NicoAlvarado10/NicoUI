@@ -16,7 +16,8 @@ import ThirdForm from "../components/astroComponents/form/ThirdForm.astro";
 import PrimaryTable from "../components/astroComponents/table/PrimaryTable.astro";
 import SecondaryInput from "../components/astroComponents/input/SecondaryInput.astro";
 import SecondaryTable from "../components/astroComponents/table/PrimaryTable.astro";
-
+import PrimaryAcordion from "../components/astroComponents/accordion/PrimaryAcordion.astro";
+import SecondaryAcordion from "../components/astroComponents/accordion/SecondaryAcordion.astro";
 
 const buttonPrimarySvelte = `
 <script>
@@ -412,6 +413,137 @@ const secondaryTableSvelte = `
 
 `;
 
+const primaryAcordionSvelte = `
+
+<div class="w-full border border-gray-300 rounded-lg bg-black py-2 px-4">
+  <details class="faq-border mb-4 pb-2 group max-lg:px-5">
+    <summary
+      class="text-white cursor-pointer flex justify-between items-center group-hover:underline"
+    >
+      ¿Puedo usar esto en mi proyecto?
+      <span class="ml-2">
+        <svg
+          class="w-4 h-4 transition-transform group-open:rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </span>
+    </summary>
+    <p class="text-white pt-5">
+      Sí. Es de uso gratuito para proyectos personales y comerciales. No se
+      requiere atribución.
+    </p>
+  </details>
+
+  <details class="faq-border mb-4 pb-2 group max-lg:px-5">
+    <summary
+      class="text-white cursor-pointer flex justify-between items-center group-hover:underline"
+    >
+      ¿Por qué no lo publicas como paquete npm?
+      <span class="ml-2">
+        <svg
+          class="w-4 h-4 transition-transform group-open:rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </span>
+    </summary>
+    <p class="text-white pt-5">
+      La idea detrás de esto es darle propiedad y control sobre el código,
+      permitiéndole decidir cómo se construyen y diseñan los componentes.
+    </p>
+  </details>
+
+  <details class="faq-border mb-4 pb-2 group max-lg:px-5">
+    <summary
+      class="text-white cursor-pointer flex justify-between items-center group-hover:underline"
+    >
+      ¿Qué frameworks son compatibles?
+      <span class="ml-2">
+        <svg
+          class="w-4 h-4 transition-transform group-open:rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </span>
+    </summary>
+    <p class="text-white pt-5">
+      Puedes usarlo en cualquiera, React, Astro, Angular, Vue, etc.
+    </p>
+  </details>
+</div>
+
+`;
+const secondaryAcordionSvelte = `
+<div class="w-full">
+  <details class="mb-2">
+    <summary
+      class="cursor-pointer px-4 py-2 font-medium bg-blue-600 text-white rounded-t-lg hover:bg-blue-700 flex items-center"
+    >
+      <i class="ri-edit-2-line mr-2"></i>
+      Custom Header 1
+    </summary>
+    <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-b-lg">
+      This accordion has custom styling applied to it.
+    </div>
+  </details>
+
+  <details class="mb-2">
+    <summary
+      class="cursor-pointer px-4 py-2 font-medium bg-blue-600 text-white rounded-t-lg hover:bg-blue-700 flex items-center"
+    >
+      <i class="ri-settings-2-line mr-2"></i>
+      Custom Header 2
+    </summary>
+    <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-b-lg">
+      You can customize the colors, padding, and other styles.
+    </div>
+  </details>
+
+  <details>
+    <summary
+      class="cursor-pointer px-4 py-2 font-medium bg-blue-600 text-white rounded-t-lg hover:bg-blue-700 flex items-center"
+    >
+      <i class="ri-lightbulb-line mr-2"></i>
+      Custom Header 3
+    </summary>
+    <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-b-lg">
+      This demonstrates how flexible the accordion component can be.
+    </div>
+  </details>
+</div>
+
+
+`;
+
+
 ---
 
 <Layout title="NicoUI | Svelte">
@@ -425,6 +557,7 @@ const secondaryTableSvelte = `
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#alertSvelte">Alert</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formSvelte">Form</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableSvelte">Table</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#acordionSvelte">Accordion</a></li>
         </ul>
     </aside>
 
@@ -473,6 +606,13 @@ const secondaryTableSvelte = `
             <h2 class="text-white text-2xl font-semibold pb-5">Tables</h2>
            <ComponentsLayout  Component={PrimaryTable } Code={primaryTableSvelte} Copy={primaryTableSvelte}/>
            <ComponentsLayout  Component={SecondaryTable } Code={secondaryTableSvelte} Copy={secondaryTableSvelte}/>
+       
+          
+          </section>
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="acordionSvelte">
+            <h2 class="text-white text-2xl font-semibold pb-5">Accordions</h2>
+           <ComponentsLayout  Component={PrimaryAcordion } Code={primaryAcordionSvelte} Copy={primaryAcordionSvelte}/>
+           <ComponentsLayout  Component={SecondaryAcordion } Code={secondaryAcordionSvelte} Copy={secondaryAcordionSvelte}/>
        
           
           </section>
