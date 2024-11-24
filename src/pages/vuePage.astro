@@ -2,22 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import ComponentsLayout from "../layouts/ComponentsLayout.astro";
 import DocsLayout from "../layouts/DocsLayout.astro";
-import PrimaryButton from "../components/astroComponents/button/PrimaryButton.astro";
-import SecondaryButton from "../components/astroComponents/button/SecondaryButton.astro";
-import ThirdButton from "../components/astroComponents/button/ThirdButton.astro";
-import PrimaryCard from "../components/astroComponents/card/PrimaryCard.astro";
-import SecondaryCard from "../components/astroComponents/card/SecondaryCard.astro";
-import ThirdCard from "../components/astroComponents/card/ThirdCard.astro";
 import Alert from "../components/astroComponents/alert/Alert.astro";
-import PrimaryInput from "../components/astroComponents/input/PrimaryInput.astro";
-import PrimaryForm from "../components/astroComponents/form/PrimaryForm.astro";
-import SecondaryForm from "../components/astroComponents/form/SecondaryForm.astro";
-import ThirdForm from "../components/astroComponents/form/ThirdForm.astro";
-import PrimaryTable from "../components/astroComponents/table/PrimaryTable.astro";
-import SecondaryInput from "../components/astroComponents/input/SecondaryInput.astro";
-import SecondaryTable from "../components/astroComponents/table/PrimaryTable.astro";
-import PrimaryAcordion from "../components/astroComponents/accordion/PrimaryAcordion.astro";
-import SecondaryAcordion from "../components/astroComponents/accordion/SecondaryAcordion.astro";
+import {PrimaryButton, SecondaryButton, ThirdButton} from "../components/astroComponents/button/index.astro"
+import {PrimaryCard, SecondaryCard, ThirdCard} from "../components/astroComponents/card/index.astro"
+import {PrimaryInput, SecondaryInput} from "../components/astroComponents/input/index.astro"
+import {PrimaryForm, SecondaryForm, ThirdForm} from "../components/astroComponents/form/index.astro"
+import {PrimaryTable, SecondaryTable} from "../components/astroComponents/table/index.astro"
+import {PrimaryAccordion, SecondaryAccordion} from "../components/astroComponents/accordion/index.astro"
 
 const buttonPrimaryVue = `
 <template>
@@ -586,7 +577,7 @@ export default {
 
 `;
 
-const primaryAcordionVue = `
+const primaryAccordionVue = `
 <template>
   <div class="w-full border border-gray-300 rounded-lg bg-black py-2 px-4">
     <details class="faq-border mb-4 pb-2 group max-lg:px-5">
@@ -685,7 +676,7 @@ export default {
 
 
 `;
-const secondaryAcordionVue = `
+const secondaryAccordionVue = `
 <template>
   <div class="w-full">
     <details class="mb-2">
@@ -803,8 +794,8 @@ export default {
 
           <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="acordionVue">
             <h2 class="text-white text-2xl font-semibold pb-5">Accordions</h2>
-           <ComponentsLayout Component={PrimaryAcordion } Code={primaryAcordionVue} Copy={primaryAcordionVue}/>
-           <ComponentsLayout  Component={SecondaryAcordion } Code={secondaryAcordionVue} Copy={secondaryAcordionVue}/>
+           <ComponentsLayout Component={PrimaryAccordion } Code={primaryAccordionVue} Copy={primaryAccordionVue}/>
+           <ComponentsLayout  Component={SecondaryAccordion } Code={secondaryAccordionVue} Copy={secondaryAccordionVue}/>
           </section>
     </section>
 </Layout>
