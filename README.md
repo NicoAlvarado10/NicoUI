@@ -5,7 +5,7 @@ Welcome to **NicoUI**, a beautifully designed collection of components that you 
 ## 📚 Table of Contents
 - [Features](#-features)
 - [Components](#-components)
-- [Frameworks](#-frameworks)
+- [Frameworks](#-frameworks) 
 - [Contributing](#-contributing)
 - [License](#-license)
 
