@@ -1,21 +1,59 @@
-# NicoUI | La Mejor Colección de Componentes
+# 🌟 NicoUI | The Best Collection of Components
 
-Bienvenido a **NicoUI**, una colección de componentes bellamente diseñados que puedes copiar y pegar en tus aplicaciones. Estos componentes son accesibles, personalizables y de código abierto, lo que te permite integrarlos fácilmente en varios frameworks como React, Astro, Angular, Vue entre otros.
+Welcome to **NicoUI**, a beautifully designed collection of components that you can copy and paste into your applications. These components are accessible, customizable, and open-source, allowing you to easily integrate them into various frameworks like React, Astro, Angular, Vue, and more.
 
-## Tabla de Contenidos
+## 📚 Table of Contents
+- [Features](#-features)
+- [Components](#-components)
+- [Frameworks](#-frameworks)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-- [Características](#características)
-- [Licencia](#licencia)
+## ✨ Features
+- **Modern Design**: Elegant and visually appealing components
+- **Accessibility**: Built with accessibility principles in mind
+- **Copy & Paste**: Simply copy the components you need
+- **Customizable**: Easily modify using Tailwind CSS
+- **Framework Agnostic**: Works with React, Vue, Angular, Astro and more
+- **Open Source**: Free to use in personal and commercial projects
 
-## Características
+## 🎨 Components
+Our collection includes a variety of beautifully designed components:
 
-- **Diseño Moderno**: Componentes visualmente atractivos que mejoran la experiencia del usuario.
-- **Accesibilidad**: Diseñados con principios de accesibilidad en mente.
-- **Personalización**: Fácilmente personalizables mediante Tailwind CSS.
-- **Compatible con Múltiples Frameworks**: Utiliza en React, Astro, Angular, Vue y más.
+- **Buttons**: Primary, Secondary, Warning
+- **Cards**: Basic, Profile, Product
+- **Forms**: Login, Contact, Newsletter
+- **Inputs**: Text, Password, Search
+- **Alerts**: Info, Success, Warning
+- **Tables**: Basic, Striped, Bordered
+- **Accordions**: Basic, Custom styled
 
-## Licencia
+Each component is:
+- Built with Tailwind CSS
+- Fully responsive
+- Accessible
+- Customizable
+- Easy to copy and paste
 
-Este proyecto está bajo la Licencia MIT. Puedes usarlo tanto para uso personal como comercial sin restricciones. Esto significa que tienes la libertad de modificar y distribuir el código según tus necesidades. Consulta el archivo LICENSE para más detalles.
+## 🛠️ Frameworks
+NicoUI supports all major frontend frameworks:
 
+- React
+- Angular
+- Vue
+- Svelte
+- Astro
+- Next.js
 
+Components are available in framework-specific syntax and can be easily integrated into your projects.
+
+## 🤝 Contributing
+We welcome contributions! See our [Contributing Guidelines](CONTRIBUTING.md) for details on how to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Create new components
+- Improve documentation
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE). 
