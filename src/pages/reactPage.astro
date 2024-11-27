@@ -1,23 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import ComponentsLayout from "../layouts/ComponentsLayout.astro";
-import DocsLayout from "../layouts/DocsLayout.astro";
-import PrimaryButton from "../components/astroComponents/button/PrimaryButton.astro";
-import SecondaryButton from "../components/astroComponents/button/SecondaryButton.astro";
-import ThirdButton from "../components/astroComponents/button/ThirdButton.astro";
-import PrimaryCard from "../components/astroComponents/card/PrimaryCard.astro";
-import SecondaryCard from "../components/astroComponents/card/SecondaryCard.astro";
-import ThirdCard from "../components/astroComponents/card/ThirdCard.astro";
-import Alert from "../components/astroComponents/alert/Alert.astro";
-import PrimaryInput from "../components/astroComponents/input/PrimaryInput.astro";
-import PrimaryForm from "../components/astroComponents/form/PrimaryForm.astro";
-import SecondaryForm from "../components/astroComponents/form/SecondaryForm.astro";
-import ThirdForm from "../components/astroComponents/form/ThirdForm.astro";
-import PrimaryTable from "../components/astroComponents/table/PrimaryTable.astro";
-import SecondaryInput from "../components/astroComponents/input/SecondaryInput.astro";
-import SecondaryTable from "../components/astroComponents/table/PrimaryTable.astro";
-import PrimaryAcordion from "../components/astroComponents/accordion/PrimaryAcordion.astro";
-import SecondaryAcordion from "../components/astroComponents/accordion/SecondaryAcordion.astro";
+import Layout from "@layouts/Layout.astro";
+import ComponentsLayout from "@layouts/ComponentsLayout.astro";
+import DocsLayout from "@layouts/DocsLayout.astro";
+import Alert from "@components/shared/alert/Alert.astro";
+import {PrimaryButton, SecondaryButton, ThirdButton} from "@components/shared/button/index.astro"
+import {PrimaryCard, SecondaryCard, ThirdCard} from "@components/shared/card/index.astro"
+import {PrimaryInput, SecondaryInput} from "@components/shared/input/index.astro"
+import {PrimaryForm, SecondaryForm, ThirdForm} from "@components/shared/form/index.astro"
+import {PrimaryTable, SecondaryTable} from "@components/shared/table/index.astro"
+import {PrimaryAccordion, SecondaryAccordion} from "@components/shared/accordion/index.astro"
 
 const buttonPrimaryReact = `
 
@@ -407,7 +398,7 @@ export default function SecondaryTable() {
 
 `;
 
-const primaryAcordionReact = `
+const primaryAccordionReact = `
 
 
 export const AccordionComponent = () => {
@@ -497,7 +488,7 @@ export const AccordionComponent = () => {
 
 
 `;
-const secondaryAcordionReact = `
+const secondaryAccordionReact = `
 
 export const AccordionComponent = () => {
   return (
@@ -604,8 +595,8 @@ export const AccordionComponent = () => {
 
         <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="acordionReact">
           <h2 class="text-white text-2xl font-semibold pb-5">Acordions</h2>
-         <ComponentsLayout  Component={PrimaryAcordion} Code={primaryAcordionReact} Copy={primaryAcordionReact}/>
-         <ComponentsLayout  Component={SecondaryAcordion } Code={secondaryAcordionReact} Copy={secondaryAcordionReact}/>
+         <ComponentsLayout  Component={PrimaryAccordion} Code={primaryAccordionReact} Copy={primaryAccordionReact}/>
+         <ComponentsLayout  Component={SecondaryAccordion } Code={secondaryAccordionReact} Copy={secondaryAccordionReact}/>
      
         </section>
     </section>
