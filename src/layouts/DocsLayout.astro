@@ -1,14 +1,23 @@
 ---
-const {framework, guia, icon} = Astro.props
+
+
+const {framework, guia, icon, anteriorPage} = Astro.props
 ---
      
         <section class="text-white flex flex-col max-w-4xl m-auto ">
 
-            <div class="text-white font-semibold flex items-center gap-2 mt-7 max-sm:px-5">
-                <h2>Docs</h2>
-                <span><i class="ri-arrow-right-line "></i></span>
-                {framework}
-                <span class="font-normal text-2xl"><i class={icon}></i></span>
+            <div class="text-white font-semibold flex items-center gap-2 mt-7 max-sm:px-5 justify-between">
+                <div class="flex items-center gap-2">
+                    <h2>Docs</h2>
+                    <span><i class="ri-arrow-right-line "></i></span>
+                    <h3>
+                        {framework}
+                    </h3>
+                    <span class="font-normal text-2xl"><i class={icon}></i></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a class="flex items-center gap-2"  href={anteriorPage}><i class="ri-arrow-left-line"></i>Volver atrás</a>
+                </div>
             </div>
 
             <h1 class="text-3xl font-semibold mt-3 max-sm:px-5">Instalación {framework}</h1>
