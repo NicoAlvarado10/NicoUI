@@ -9,6 +9,7 @@ import {PrimaryInput, SecondaryInput} from "@components/shared/input/index.astro
 import {PrimaryForm, SecondaryForm, ThirdForm} from "@components/shared/form/index.astro"
 import {PrimaryTable, SecondaryTable} from "@components/shared/table/index.astro"
 import {PrimaryAccordion, SecondaryAccordion} from "@components/shared/accordion/index.astro"
+import Checkbox from "@components/shared/checkbox/Checkbox.astro";
 
 const buttonPrimaryVue = `
 <template>
@@ -727,6 +728,35 @@ export default {
 
 `;
 
+const checkboxVue = `
+<template>
+  <div class="bg-black flex items-center space-x-2 p-2 rounded">
+    <input
+      type="checkbox"
+      id="exampleCheckbox"
+      name="example"
+      class="peer"
+    />
+    <label
+      for="exampleCheckbox"
+      class="text-sm text-white font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    >
+      Accept terms and conditions
+    </label>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "TermsCheckbox",
+};
+</script>
+
+<style scoped>
+</style>
+
+`;
+
 ---
 
 <Layout title="NicoUI | Vue">
@@ -741,6 +771,7 @@ export default {
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formVue">Form</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableVue">Table</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#acordionVue">Accordion</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#checkboxVue">Checkbox</a></li>
         </ul>
     </aside>
 
@@ -797,6 +828,11 @@ export default {
             <h2 class="text-white text-2xl font-semibold pb-5">Accordions</h2>
            <ComponentsLayout Component={PrimaryAccordion } Code={primaryAccordionVue} Copy={primaryAccordionVue}/>
            <ComponentsLayout  Component={SecondaryAccordion } Code={secondaryAccordionVue} Copy={secondaryAccordionVue}/>
+          </section>
+
+          <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="checkboxVue">
+            <h2 class="text-white text-2xl font-semibold pb-5">Checkbox</h2>
+           <ComponentsLayout Component={Checkbox} Code={checkboxVue} Copy={checkboxVue}/>
           </section>
     </section>
 </Layout>

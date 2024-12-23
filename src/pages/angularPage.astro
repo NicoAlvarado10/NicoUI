@@ -9,6 +9,7 @@ import {PrimaryInput, SecondaryInput} from "@components/shared/input/index.astro
 import {PrimaryForm, SecondaryForm, ThirdForm} from "@components/shared/form/index.astro"
 import {PrimaryTable, SecondaryTable} from "@components/shared/table/index.astro"
 import {PrimaryAccordion, SecondaryAccordion} from "@components/shared/accordion/index.astro"
+import Checkbox from "@components/shared/checkbox/Checkbox.astro";
 
 const buttonPrimaryAngular = `
 // src/app/components/primary-button/primary-button.component.ts
@@ -633,6 +634,37 @@ export class AccordionComponent {
 
 `;
 
+const checkboxAngular = `
+<!-- terms-checkbox.component.html -->
+<div class="bg-black flex items-center space-x-2 p-2 rounded">
+  <input
+    type="checkbox"
+    id="exampleCheckbox"
+    name="example"
+    class="peer"
+  />
+  <label
+    for="exampleCheckbox"
+    class="text-sm text-white font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+  >
+    Accept terms and conditions
+  </label>
+</div>
+
+<!-- terms-checkbox.component.ts -->
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-terms-checkbox',
+  templateUrl: './terms-checkbox.component.html',
+  styleUrls: ['./terms-checkbox.component.css']
+})
+export class TermsCheckboxComponent {}
+
+/* terms-checkbox.component.css */
+
+`;
+
 ---
 
 <Layout title="NicoUI | Angular">
@@ -646,6 +678,7 @@ export class AccordionComponent {
         <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formAngular">Form</a></li>
         <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableAngular">Table</a></li>
         <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#acordionAngular">Accordion</a></li>
+        <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#checkboxAngular">Checkbox</a></li>
       </ul>
     </aside>
 
@@ -700,6 +733,10 @@ export class AccordionComponent {
       <ComponentsLayout Component={SecondaryAccordion } Code={secondaryAccordionAngular} Copy={secondaryAccordionAngular} />
     </section>
 
+    <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="checkboxAngular">
+      <h2 class="text-white text-2xl font-semibold pb-5">Checkbox</h2>
+      <ComponentsLayout Component={Checkbox} Code={checkboxAngular} Copy={checkboxAngular} />
+    </section>
   </section>
 </Layout>
 

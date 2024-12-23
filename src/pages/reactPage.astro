@@ -9,6 +9,7 @@ import {PrimaryInput, SecondaryInput} from "@components/shared/input/index.astro
 import {PrimaryForm, SecondaryForm, ThirdForm} from "@components/shared/form/index.astro"
 import {PrimaryTable, SecondaryTable} from "@components/shared/table/index.astro"
 import {PrimaryAccordion, SecondaryAccordion} from "@components/shared/accordion/index.astro"
+import Checkbox from "@components/shared/checkbox/Checkbox.astro";
 
 const buttonPrimaryReact = `
 
@@ -529,6 +530,31 @@ export const AccordionComponent = () => {
 
 `;
 
+const checkboxReact = `
+
+export const Checkbox = () => {
+  return (
+    <div className="bg-black flex items-center space-x-2 p-2 rounded">
+      <input
+        type="checkbox"
+        id="exampleCheckbox"
+        name="example"
+        className="peer"
+      />
+      <label
+        htmlFor="exampleCheckbox"
+        className="text-sm text-white font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </label>
+    </div>
+  );
+};
+
+
+
+`;
+
 ---
 
 <Layout title="NicoUI | React">
@@ -543,6 +569,7 @@ export const AccordionComponent = () => {
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#formReact">Form</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#tableReact">Table</a></li>
             <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#acordionReact">Accordion</a></li>
+            <li><a class="text-gray-400 transition duration-150 hover:text-white" href="#checkboxReact">Checkbox</a></li>
         </ul>
     </aside>
 
@@ -599,6 +626,10 @@ export const AccordionComponent = () => {
          <ComponentsLayout  Component={PrimaryAccordion} Code={primaryAccordionReact} Copy={primaryAccordionReact}/>
          <ComponentsLayout  Component={SecondaryAccordion } Code={secondaryAccordionReact} Copy={secondaryAccordionReact}/>
      
+        </section>
+        <section class="flex flex-col justify-center max-w-4xl m-auto gap-4 mt-24 max-sm:px-3" id="checkboxReact">
+          <h2 class="text-white text-2xl font-semibold pb-5">Checkbox</h2>
+         <ComponentsLayout  Component={Checkbox} Code={checkboxReact} Copy={checkboxReact}/>
         </section>
     </section>
 </Layout>
