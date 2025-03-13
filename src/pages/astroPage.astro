@@ -54,31 +54,59 @@ const buttonWarningAstro = `
 
 const primaryCardAstro = `
 ---
-
 ---
 
-<article class="flex flex-col rounded-lg py-3 transition duration-150 shadow-lg hover:shadow-2xl">
-  <div class="flex items-center gap-4 bg-rose-500 py-4 px-3">
-    <span class="py-2 px-3 rounded-full border-solid border-white bg-white">
-      <i class="ri-user-fill text-slate-400 text-xl"></i>
-    </span>
-    <div>
-      <h3 class="text-white font-bold">Jane Doe</h3>
-      <p class="text-white">Diseñadora UI/UX</p>
+<article class="w-full md:w-80 bg-white border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl p-6">
+  <header class="relative pb-0">
+    <div class="absolute top-4 right-4">
+      <span class="px-2 py-1 text-xs font-semibold text-white bg-emerald-500 rounded-lg hover:bg-emerald-800 transition duration-150">PRO</span>
     </div>
-  </div>
-  <div class="p-3 flex flex-col gap-2">
-    <p class="text-slate-600">Creando experiencias de usuario intuitivas y atractivas.</p>
-    <ul class="flex items-center gap-4">
-      <li><span class="font-bold text-sm">UI/UX</span></li>
-      <li><span class="font-bold text-sm">Figma</span></li>
-      <li><span class="font-bold text-sm">Sketch</span></li>
-    </ul>
-  </div>
-  <div class="py-2 px-4 flex items-center justify-between">
-    <a class="bg-slate-300 cursor-pointer py-2 px-4 rounded-md transition duration-150 hover:bg-slate-400">Ver perfil</a>
-    <a class="bg-neutral-950 text-white py-2 px-4 rounded-md transition duration-150 hover:bg-neutral-900" href="#">Conectar</a>
-  </div>
+    <div class="flex flex-col items-center">
+      <figure class="border-white border-solid shadow-md px-3 py-2 rounded-full">
+        <i class="ri-user-line text-3xl"></i>
+      </figure>
+      <h2 class="mt-4 text-xl font-semibold">Jane Doe</h2>
+      <p class="text-gray-500">Product Designer</p>
+    </div>
+  </header>
+  <section class="pt-6">
+    <div class="flex justify-between text-center mb-6">
+      <div class="flex-1">
+        <p class="text-2xl font-bold text-gray-900">28</p>
+        <p class="text-xs text-gray-500">Projects</p>
+      </div>
+      <div class="flex-1">
+        <p class="text-2xl font-bold text-gray-900">160</p>
+        <p class="text-xs text-gray-500">Likes</p>
+      </div>
+      <div class="flex-1">
+        <p class="text-2xl font-bold text-gray-900">5.2k</p>
+        <p class="text-xs text-gray-500">Followers</p>
+      </div>
+    </div>
+    <div class="space-y-2">
+      <div class="flex justify-between text-sm">
+        <span class="text-gray-500">Profile Completion</span>
+        <span class="font-medium">85%</span>
+      </div>
+      <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+        <div class="bg-blue-500 h-2 w-[85%]"></div>
+      </div>
+    </div>
+  </section>
+  <footer class="flex gap-2 items-center mt-4">
+    <button class="cursor-pointer flex-1 flex items-center justify-center px-3 py-2 text-sm border border-gray-200 rounded-lg">
+      <i class="ri-heart-fill text-lg text-rose-500"></i>
+      <span class="ml-1">Liked</span>
+    </button>
+    <button class="cursor-pointer flex-1 flex items-center justify-center px-3 py-2 text-sm border border-gray-200 rounded-lg">
+      <i class="ri-message-3-line text-lg text-gray-500"></i>
+      <span class="ml-1">Message</span>
+    </button>
+    <button class="cursor-pointer w-9 h-9 flex items-center justify-center border border-gray-200 rounded-lg">
+      <i class="ri-share-line text-lg text-gray-500"></i>
+    </button>
+  </footer>
 </article>
 
 `;
